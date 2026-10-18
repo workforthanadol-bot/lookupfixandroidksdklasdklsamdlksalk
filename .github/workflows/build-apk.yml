@@ -24,14 +24,12 @@ jobs:
 
       - name: Flutter pub get
         run: flutter pub get
-        working-directory: score_lookup
 
       - name: Build APK
         run: flutter build apk --release --no-shrink
-        working-directory: score_lookup
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: app-release
-          path: score_lookup/build/app/outputs/flutter-apk/lookup.apk
+          path: build/app/outputs/flutter-apk/lookupapp.apk
